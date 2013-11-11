@@ -1,0 +1,1 @@
+MyServerPlugin is a plugin for CraftBukkit customly made by me.
