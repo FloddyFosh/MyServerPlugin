@@ -1,0 +1,5 @@
+name: ${project.name}
+main: nl.floddyfosh.myserverplugin.MyServerPlugin
+description: 'Custom Server Plugin to play around with'
+version: '${project.version}'
+author: 'Chris Bakker'

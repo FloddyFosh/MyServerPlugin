@@ -1,10 +1,7 @@
 package nl.floddyfosh.myserverplugin;
 
-public class MyServerPlugin {
+import org.bukkit.plugin.java.JavaPlugin;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("OK");
-	}
+public final class MyServerPlugin extends JavaPlugin{
 
 }
