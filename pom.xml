@@ -3,7 +3,7 @@
   <groupId>nl.floddyfosh</groupId>
   <artifactId>MyServerPlugin</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>My Server Plugin</name>
+  <name>MyServerPlugin</name>
   <description>A custom CraftBukkit plugin for my Minecraft Server.</description>
   <repositories>
   	<repository>
@@ -23,6 +23,15 @@
 	        </configuration>
   		</plugin>
   	</plugins>
+  	<resources>
+	    <resource>
+	        <directory>src/main/resources</directory>
+	        <filtering>true</filtering>
+	        <includes>
+	            <include>plugin.yml</include>
+	        </includes>
+	    </resource>
+     </resources>
   </build>
   <dependencies>
 	  <dependency>
@@ -32,10 +41,10 @@
 		   <scope>provided</scope>
 	   </dependency>
 	   <dependency>
-		   <groupId>org.bukkit</groupId>
-		   <artifactId>craftbukkit</artifactId>
-		   <version>1.6.4-R2.0</version>
-		   <scope>provided</scope>
+		  <groupId>org.bukkit</groupId>
+		  <artifactId>craftbukkit</artifactId>
+		  <version>1.6.4-R2.0</version>
+		  <scope>provided</scope>
 	   </dependency>
   </dependencies>
   <inceptionYear>2013</inceptionYear>
