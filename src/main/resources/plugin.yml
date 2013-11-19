@@ -3,3 +3,19 @@ main: nl.floddyfosh.myserverplugin.MyServerPlugin
 description: 'Custom Server Plugin to play around with'
 version: '${project.version}'
 author: 'Chris Bakker'
+
+commands:
+    testmyplugin:
+        description: Command to see if MyServerPlugin is responding.
+        usage: /testmyplugin
+        permission: myserverplugin.testmyplugin
+        permission-message: You don't have permission to use this command.
+
+permissions:
+    myserverplugin.*:
+        description: Gives access to all myserverplugin commands.
+        children:
+            myserverplugin.testmyplugin: true
+    myserverplugin.testmyplugin:
+        description: Allows you to test myserverplugin.
+        default: op

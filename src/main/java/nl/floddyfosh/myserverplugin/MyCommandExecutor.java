@@ -13,7 +13,16 @@ public class MyCommandExecutor implements CommandExecutor {
 	}
 	
 	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String args[]) {
+	public boolean onCommand(CommandSender sender, Command command, String label, String args[]) {
+		String cmd = command.getName().toLowerCase();
+		
+		if(cmd.equals("testmyplugin")) {
+			if(sender.hasPermission("myserverplugin.testmyplugin")) {
+				sender.sendMessage("MyServerPlugin working!");
+				return true;
+			}
+		}
+		
 		return false;
 	}
 }

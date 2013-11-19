@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>nl.floddyfosh</groupId>
   <artifactId>MyServerPlugin</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.3-SNAPSHOT</version>
   <name>MyServerPlugin</name>
   <description>A custom CraftBukkit plugin for my Minecraft Server.</description>
   <repositories>
