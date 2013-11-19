@@ -13,22 +13,22 @@ import nl.floddyfosh.myserverplugin.customitems.MyCustomItem;
 import nl.floddyfosh.myserverplugin.customitems.MyCustomItemManager;
 
 public class MyBlockDamageListener implements Listener {
-	
-	private MyServerPlugin plugin;
-	
-	public MyBlockDamageListener(MyServerPlugin plugin) {
-		this.plugin = plugin;
-		plugin.getServer().getPluginManager().registerEvents(this, plugin);
-	}
-	
-	@EventHandler(priority = EventPriority.LOWEST)
+    
+    private MyServerPlugin plugin;
+    
+    public MyBlockDamageListener(MyServerPlugin plugin) {
+        this.plugin = plugin;
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+    }
+    
+    @EventHandler(priority = EventPriority.LOWEST)
     public void onBlockDamage(BlockDamageEvent event) {
-		if (event.getBlock().getType() == Material.SKULL) {
-			Skull skull = (Skull) event.getBlock().getState();
+        if (event.getBlock().getType() == Material.SKULL) {
+            Skull skull = (Skull) event.getBlock().getState();
             if (skull.getSkullType() == SkullType.PLAYER && skull.hasOwner() && MyCustomItemManager.isCustomItem(skull.getOwner())) {
                 event.getPlayer().sendMessage(MyCustomItem.forSkinName(skull.getOwner()).getLore());
             }
-		}
-	}
+        }
+    }
 
 }

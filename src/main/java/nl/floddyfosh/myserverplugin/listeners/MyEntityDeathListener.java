@@ -19,22 +19,22 @@ import nl.floddyfosh.myserverplugin.customitems.MyCustomItemManager;
 
 public class MyEntityDeathListener implements Listener {
 
-	private MyServerPlugin plugin;
-	
-	public MyEntityDeathListener(MyServerPlugin plugin) {
-		this.plugin = plugin;
-		plugin.getServer().getPluginManager().registerEvents(this, plugin);
-	}
-	
-	@EventHandler(priority = EventPriority.LOWEST)
+    private MyServerPlugin plugin;
+    
+    public MyEntityDeathListener(MyServerPlugin plugin) {
+        this.plugin = plugin;
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
+    }
+    
+    @EventHandler(priority = EventPriority.LOWEST)
     public void onEntityDeath(EntityDeathEvent event) {
-		
-		if (event.getEntity().getLastDamageCause() == null)
+        
+        if (event.getEntity().getLastDamageCause() == null)
             return;
-		
-		if(event.getEntityType().equals(EntityType.SNOWMAN)) {     	
-        	event.getDrops().add(MyCustomItemManager.getCustomItem(MyCustomItem.HW_PUMPKIN));
+        
+        if(event.getEntityType().equals(EntityType.SNOWMAN)) {
+            event.getDrops().add(MyCustomItemManager.getCustomItem(MyCustomItem.HW_PUMPKIN));
         }
     }
-	
+    
 }

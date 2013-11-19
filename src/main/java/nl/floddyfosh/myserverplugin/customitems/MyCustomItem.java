@@ -1,7 +1,7 @@
 package nl.floddyfosh.myserverplugin.customitems;
 
 public enum MyCustomItem {
-	HW_PUMPKIN("MHF_Pumpkin", "Halloween Pumpkin", "Pumpkin for Halloween 2013");
+    HW_PUMPKIN("MHF_Pumpkin", "Halloween Pumpkin", "Pumpkin for Halloween 2013");
 
     private String skin;
     private String displayName;
@@ -22,7 +22,7 @@ public enum MyCustomItem {
     }
     
     public String getLore() {
-    	return this.lore;
+        return this.lore;
     }
 
     public static MyCustomItem forSkinName(String skinName) {
